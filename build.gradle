@@ -1,0 +1,32 @@
+buildscript {
+    dependencies {
+    }
+}
+
+allprojects {
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+}
+
+idea {
+    project {
+        //languageLevel = '1.8'
+        vcs = 'Git'
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'scala'
+
+    apply from: rootProject.file("versions.gradle")
+
+    buildDir = "$projectDir/build-${versions.scala}"
+
+    task copyToLib(type: Copy) {
+        into "$buildDir/output/lib"
+        from configurations.runtime
+    }
+}
+
+defaultTasks 'clean', 'build'
