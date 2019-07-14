@@ -25,3 +25,11 @@ if (versions.scala == '2.12') versions.scala_library = '2.12.1'
 versions.scalatest = '2.2.0'
 if (versions.scala == "2.11") versions.scalatest = '2.2.4'
 if (versions.scala == "2.12") versions.scalatest = '3.0.1'
+
+
+ext.log4j2_version='2.11.2'
+ext.httpclient_version='4.5.8'
+ext.commons_io_version='2.6'
+ext.commons_lang_version='3.9'
+ext.codec_version='1.9'
+ext.junit_version='4.12'

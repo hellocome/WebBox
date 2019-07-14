@@ -1,0 +1,10 @@
+dependencies {
+    compile project(':WebBoxCommon')
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: "${log4j2_version}"
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: "${log4j2_version}"
+    compile group: 'commons-codec', name: 'commons-codec', version: "${codec_version}"
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: "${commons_lang_version}"
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: "${httpclient_version}"
+
+    testCompile "junit:junit:${junit_version}"
+}

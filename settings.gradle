@@ -1,34 +1,19 @@
 
 rootProject.name = 'WebBox'
 
-//def supportedScalaVersions = [ '2.10', '2.11', '2.12' ]
-//def scalaProjects = ['AppBase']
-//def nonScalaProjects = ['apputils']
+def mainProject = ['WebBoxServer', 'WebBoxCommon']
+def pluginProject = ['UltraConnect']
 
-def scalaProject = ['WebBoxServer']
-
-/*
-supportedScalaVersions.forEach { scalaVersion ->
-    scalaProjects.forEach { name ->
-        String path = ":" + name + "_${scalaVersion}"
-
-        include path
-        project(path).projectDir = file(name)
-    }
-}
-
- 
-nonScalaProjects.forEach { name ->
-    String path = ":" + name
-
-    include path
-    project(path).projectDir = file(name)
-}
- */
-
-scalaProject.forEach { name ->
+mainProject.forEach { name ->
     String path = ":" + name
 
     include path
     project(path).projectDir = file("WebBoxProject/" + name)
+}
+
+pluginProject.forEach { name ->
+    String path = ":" + name
+
+    include path
+    project(path).projectDir = file("Plugins/" + name)
 }
