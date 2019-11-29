@@ -6,7 +6,7 @@ public class UCAPITest {
 
     @Test
     public void testPostRelay() throws Exception {
-        UCAPI ucapi = new UCAPI("624772977943", "25802580");
+        UCAPI ucapi = new UCAPI("65464654654", "656465465");
 
         System.out.println(ucapi.postRelay());
     }

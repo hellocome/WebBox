@@ -66,5 +66,4 @@ public class UCAPI {
 
         return SimpleHttpClient.postWithResponseAsString(httpPost);
     }
-
 }
